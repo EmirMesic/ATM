@@ -41,8 +41,14 @@ public class Account {
 	public double getBalance() {
 		return this.balance;
 	}
+
 	public void setBalance(double balance) {
-		this.balance=balance;
+		this.balance = balance;
+	}
+
+	public String toString() {
+		return "Account number: " + accountNumber + " | " + "Account owner: " + accountOwner + " | "
+				+ "Current balance: " + balance;
 	}
 
 }
