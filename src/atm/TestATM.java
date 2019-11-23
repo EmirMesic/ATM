@@ -24,6 +24,10 @@ public class TestATM {
 		System.out.println(acc2.getBalance());
 
 		System.out.println(acc1.toString());
+		
+		System.out.println();
+		
+		listOfAccounts(createdAccounts);
 	}
 
 	public static void transferMoney(Account sourceAccount, Account targetAccount, double transferAmount) {
@@ -34,6 +38,13 @@ public class TestATM {
 		sourceAccount.setBalance(sourceAccount.getBalance() - transferAmount);
 		targetAccount.setBalance(targetAccount.getBalance() + transferAmount);
 		System.out.println("Transfer successful!");
+	}
+	
+	public static void listOfAccounts(ArrayList<Account> createdAccounts) {
+		for (Account acc : createdAccounts) {
+		    System.out.println(acc);
+		    
+		}
 	}
 
 }
