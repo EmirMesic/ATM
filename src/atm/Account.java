@@ -2,10 +2,12 @@ package atm;
 
 public class Account {
 
+	// Data fields
 	private int accountNumber;
 	private String accountOwner;
 	private double balance;
 
+	// Constructors
 	Account() {
 
 	}
@@ -16,6 +18,7 @@ public class Account {
 		this.balance = balance;
 	}
 
+	// Methods
 	public void deposit(double amountOfMoney) {
 		this.balance += amountOfMoney;
 	}
@@ -29,7 +32,14 @@ public class Account {
 			System.out.println("Sorry, you do not have enough money in your Account.");
 		}
 	}
-
+	
+	// Printing Account Details method
+	public String toString() {
+		return "Account number: " + accountNumber + " | " + "Account owner: " + accountOwner + " | "
+				+ "Current balance: " + balance;
+	}
+	
+	// getters and setters
 	public int getAccountNumber() {
 		return this.accountNumber;
 	}
@@ -46,9 +56,5 @@ public class Account {
 		this.balance = balance;
 	}
 
-	public String toString() {
-		return "Account number: " + accountNumber + " | " + "Account owner: " + accountOwner + " | "
-				+ "Current balance: " + balance;
-	}
 
 }
