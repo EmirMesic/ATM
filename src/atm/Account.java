@@ -17,29 +17,8 @@ public class Account {
 		this.accountOwner = accountOwner;
 		this.balance = balance;
 	}
-
-	// Methods
-	public void deposit(double amountOfMoney) {
-		this.balance += amountOfMoney;
-	}
-
-	public void withdrawal(double amountOfMoney) {
-
-		if (this.balance >= amountOfMoney) {
-			this.balance -= amountOfMoney;
-			System.out.println("Withdrawal completed, your current balance is: " + this.balance);
-		} else {
-			System.out.println("Sorry, you do not have enough money in your Account.");
-		}
-	}
 	
-	// Printing Account Details method
-	public String toString() {
-		return "Account number: " + accountNumber + " | " + "Account owner: " + accountOwner + " | "
-				+ "Current balance: " + balance;
-	}
-	
-	// getters and setters
+	// Getters and setters
 	public int getAccountNumber() {
 		return this.accountNumber;
 	}
@@ -56,5 +35,10 @@ public class Account {
 		this.balance = balance;
 	}
 
+	// Printing Account Details method
+	public String toString() {
+		return "Account number: " + accountNumber + " | " + "Account owner: " + accountOwner + " | "
+				+ "Current balance: " + balance;
+	}
 
 }
