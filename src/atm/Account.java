@@ -17,7 +17,7 @@ public class Account {
 		this.accountOwner = accountOwner;
 		this.balance = balance;
 	}
-	
+
 	// Getters and setters
 	public int getAccountNumber() {
 		return this.accountNumber;

@@ -13,9 +13,9 @@ public class TestATM {
 //		ArrayList<Actions> completedActions = new ArrayList<Actions>();
 
 		Scanner input = new Scanner(System.in);
-		Account acc = new Account(1, "Admin", 100);
+		Account acc = new Account(0, "Admin", 0);
 		createdAccounts.add(acc);
-		
+
 		int menuChoice = 0;
 		boolean continueInput = true;
 		do {
@@ -25,7 +25,7 @@ public class TestATM {
 
 				menuChoice = input.nextInt();
 
-				if ((menuChoice < 1 || menuChoice > 5) && menuChoice != 0) {
+				if (menuChoice < 0 || menuChoice > 5) {
 					throw new InputMismatchException();
 				}
 
@@ -45,6 +45,10 @@ public class TestATM {
 				case 5:
 					Actions.listOfAccounts(createdAccounts);
 					break;
+				case 0:
+					System.out.println("Thank you!");
+					input.close();
+					return;
 				}
 			} catch (InputMismatchException ex) {
 				System.out.println("You have tried to select non existing option, try again.");
@@ -53,9 +57,6 @@ public class TestATM {
 
 		} while (continueInput);
 
-		System.out.println("Thank you!");
-
-		input.close();
 	}
 
 }
