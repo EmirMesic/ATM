@@ -36,6 +36,7 @@ public class Account {
 	}
 
 	// Printing Account Details method
+	@Override
 	public String toString() {
 		return "Account number: " + accountNumber + " | " + "Account owner: " + accountOwner + " | "
 				+ "Current balance: " + balance;

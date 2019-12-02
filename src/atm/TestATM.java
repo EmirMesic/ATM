@@ -10,11 +10,9 @@ public class TestATM {
 	public static void main(String[] args) throws IOException {
 
 		ArrayList<Account> createdAccounts = new ArrayList<Account>();
-//		ArrayList<Actions> completedActions = new ArrayList<Actions>();
+//		ArrayList<Transaction> completedTransactions = new ArrayList<Transaction>();
 
 		Scanner input = new Scanner(System.in);
-		Account acc = new Account(0, "Admin", 0);
-		createdAccounts.add(acc);
 
 		int menuChoice = 0;
 		boolean continueInput = true;
@@ -31,19 +29,19 @@ public class TestATM {
 
 				switch (menuChoice) {
 				case 1:
-					Actions.createAccount(createdAccounts);
+					Transaction.createAccount(createdAccounts);
 					break;
 				case 2:
-					Actions.deposit(createdAccounts);
+					Transaction.deposit(createdAccounts);
 					break;
 				case 3:
-					Actions.withdrawal(createdAccounts);
+					Transaction.withdrawal(createdAccounts);
 					break;
 				case 4:
-					Actions.transfer(createdAccounts);
+					Transaction.transfer(createdAccounts);
 					break;
 				case 5:
-					Actions.listOfAccounts(createdAccounts);
+					Transaction.listOfAccounts(createdAccounts);
 					break;
 				case 0:
 					System.out.println("Thank you!");
